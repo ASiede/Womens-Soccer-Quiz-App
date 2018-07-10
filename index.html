@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Quiz App about women's soccer">
+    <title>Women's Soccer Quiz App</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  </head>
+  <body>
+    <main role="main">
+      <div class="initial-page-view">
+        <header role = "banner">
+          <h1>How much do you know about Women's Soccer HERstory?</h1>
+        </header>
+
+        <h2>Are you ready for the quiz?</h2>
+        <button class="js-start-quiz">Let's Go!</button>
+      </div>
+      
+      <div class='question-view' hidden>
+        <div class='tracker'>
+          <div class='current-question-number'></div>
+          <div class='current-score'></div>
+        </div>  
+        <div class='landscape-container'>
+          <h2 class='question'></h2>
+          <form id='question-form'>
+            <fieldset>
+              <legend></legend>
+                <div class='questions'>
+                </div>
+            </fieldset>
+            <h4 class='js-question-skipped'></h4>
+            <button type='submit' form='question-form' >Submit</button>   
+          </form>
+        </div>
+      </div> 
+
+      <div class='feedback-page' hidden>
+        <div class="feedback-content"></div>
+        <button class='next-question'>Next</button>
+      </div>
+
+      <div class="results" hidden>
+        <h2>You got <span class="total-correct"></span>correct.</h2>
+        <h2> Here is your <span class="medal-color"></span>medal</h2>
+        <img class="medal-img" src="" alt=""><br>
+        <button class="try-again">Try the quiz again!</button>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="STORE.js"></script>  
+    <script src="index.js"></script>
+  </body>
+</html>
